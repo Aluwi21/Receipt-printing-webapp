@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table Generato</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <title>Receipt Print WebApp</title>
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <h2>Table Generator</h2>
 
-  <form id="tableForm">
+  <form id="tableForm" class="printHidden">
     <label for="item">Item:</label>
     <input type="text" id="item" required><br>
     <label for="amount">Banyak:</label>
@@ -30,7 +16,7 @@
     <input type="submit" value="Tambahkan Item">
   </form><br>
 
-  <table id="dataTable">
+  <table class="centered" id="itemTable">
     <thead>
       <tr>
         <th>Item</th>
@@ -49,7 +35,7 @@
       </tr>
     </tfoot>
   </table>
-  <button onClick="window.print()">Print</button>
+  <button class="printHidden" onClick="window.print()">Print</button>
   
   <script src="script.js"></script>
 </body>
