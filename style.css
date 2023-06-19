@@ -19,6 +19,9 @@ tr,
 }
 
 @media print {
+  :root {
+    font-size: 8px;
+  }
   .printHidden {
     display: none !important;
   }
