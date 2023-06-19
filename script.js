@@ -2,7 +2,18 @@
 const tableForm = document.querySelector("#tableForm");
 const tItem = document.querySelector("#tItem");
 
+function getDate() {
+  date = new Date();
+  y = date.getFullYear();
+  m = date.getMonth();
+  d = date.getDate();
+
+  return `${d}-${m}-${y}`;
+}
+document.getElementById("d").innerHTML = getDate();
+
 /* Event */
+
 tableForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -33,7 +44,8 @@ tableForm.addEventListener("submit", (event) => {
   row.appendChild(cellTotal);
 
   let grandTotal = document.getElementById("grandTotal");
-  grandTotal.textContent = `Rp ${parseFloat(grandTotal.textContent) + total}`;
+  grandTotalNum = parseFloat(grandTotal.textContent)+total;
+  grandTotal.textContent = grandTotalNum.toFixed(3)
 
   document.getElementById("item").value = "";
   document.getElementById("amount").value = "";
