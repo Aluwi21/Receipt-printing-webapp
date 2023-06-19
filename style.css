@@ -1,41 +1,25 @@
 :root {
   font-size: 12px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 td,
 th,
 tr,
-table {
-    border-top: 2px dotted black;
-    border-collapse: collapse;
+.rTable {
+  border-top: 1px solid black;
+  border-collapse: collapse;
 }
 
-td.description,
-th.description {
-    width: 75px;
-    max-width: 75px;
+.receipt {
+  width: 155px;
+  max-width: 155px;
+  text-align: center;
+  align-content: center;
 }
-td.quantity,
-th.quantity,
-td.price,
-th.price {
-    width: 40px;
-    max-width: 40px;
-    word-break: break-all;
-}
-.centered {
-    text-align: center;
-    align-content: center;
-}
-.ticket {
-    width: 155px;
-    max-width: 155px;
-}
-
 
 @media print {
-    .printHidden {
-        display: none !important;
-    }
+  .printHidden {
+    display: none !important;
+  }
 }
