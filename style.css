@@ -41,9 +41,9 @@ td, th, tr, .rTable {
 /* Form Style */
 
 @media print {
-  :not(.print) {
+ body *:not(.print) {
     display: none;
-  }
+ }
 
   .receipt {
     border: none;
