@@ -3,20 +3,22 @@
 <head>
   <title>Receipt Print WebApp</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-  <form id="tableForm" class="printHidden">
-    <label for="item">Item:</label>
-    <input type="text" id="item" required><br>
-    <label for="amount">Banyak:</label>
-    <input type="number" id="amount" required><br>
-    <label for="price">Harga:</label>
-    <input type="number" id="price" step="0.01" required><br>
-    <input type="submit" value="Tambahkan Item">
+  
+  <form id="tableForm">
+    <input type="text" id="item" placeholder="Nama Barang" required><br>
+    <input type="number" id="amount" placeholder="Banyak" required><br>
+    <input type="number" id="price" step="0.01" placeholder="Harga" required><br>
+    <input type="submit" class="ic" value="add">
+    <button id="btnScan" class="ic">barcode_scanner</button>
+    <button id="btnReset" class="ic">Delete</button>
   </form>
   <br>
-
-  <div class="receipt">
+  
+  <h3>Receipt Preview</h3>
+  <div class="receipt print">
     <p class="rAddress">
       <span class="title">Henko Mart</span><br>
       <span class="address">Jl.Pelikan</span><br>
@@ -41,9 +43,11 @@
         </tr>
       </tfoot>
     </table>
+    <p> Thank You For Visit</p>
   </div>
-  <button class="printHidden" onClick="window.print()">Print</button>
-
+  <button class="ic" onClick="window.print()">Print</button>
+  
   <script src="script.js"></script>
+  <script src="event.js"></script>
 </body>
 </html>
