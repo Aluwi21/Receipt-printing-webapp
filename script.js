@@ -12,7 +12,7 @@ function getDate() {
 }
 document.getElementById("d").innerHTML = getDate();
 
-/* Event */
+/* Event 
 
 tableForm.addEventListener("submit", (event) => {
   event.preventDefault();
