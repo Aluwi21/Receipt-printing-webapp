@@ -41,7 +41,7 @@ td, th, tr, .rTable {
 /* Form Style */
 
 @media print {
- body *:not(.print) {
+  body:not(.print) {
     display: none;
  }
 
