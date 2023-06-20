@@ -1,28 +1,51 @@
 :root {
-  font-size: 12px;
   font-family: "Roboto";
 }
 
-td,
-th,
-tr,
-.rTable {
+button, input[type=submit] {
+  border: none;
+  width: 25px;
+  height: 25px;
+  font-size: 17px;
+}
+
+button:hover, input[type=submit]:hover {
+  border: 1px solid black;
+}
+
+.ic {
+  font-family: "Material Symbols Rounded";
+}
+
+.receipt {
+  font-size: 12px;
+  max-width: 155px;
+  width: 130px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  align-content: center;
+  border: 1px dashed black;
+}
+
+td, th, tr, .rTable {
   border-top: 1px solid black;
   border-collapse: collapse;
 }
 
-.receipt {
-  width: 155px;
-  max-width: 155px;
-  text-align: center;
-  align-content: center;
+.title {
+  /*font-size: 14px;*/
+  font-weight: bold;
 }
 
+/* Form Style */
+
 @media print {
-  :root {
-    font-size: 8px;
-  }
-  .printHidden {
+  body:not(.print) {
     display: none !important;
+  }
+
+  .receipt {
+    border: none;
   }
 }
